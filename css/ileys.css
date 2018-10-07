@@ -205,12 +205,12 @@ a:hover {
 }
 
 .header-container {
-    height: 300px;
+    height: 477px;
     display: block;
     position: relative;
     background-position: center center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat
 }
 
 .navbar-ileys {
@@ -299,6 +299,14 @@ header .site-nav:after {
     width: 4px
 }
 
+#trading:before,
+.partner:before,
+.products:before {
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    content: ''
+}
+
 .caret:after,
 .caret:before {
     content: '';
@@ -375,6 +383,11 @@ header .site-nav:after {
     word-wrap: break-word
 }
 
+.products,
+.products:before {
+    background: #e2edff
+}
+
 .active .carousel-caption {
     opacity: 1;
     top: 50%
@@ -426,23 +439,21 @@ section .main-content {
     right: -600px
 }
 
-.products {
-    background: #e2edff
-}
-
 #trading:before,
 .products:before {
     position: absolute;
     height: 60px;
-    left: 0;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    content: ''
+    left: 0
+}
+
+#trading,
+.img-wrap,
+.partner {
+    position: relative
 }
 
 .products:before {
     top: -36px;
-    background: #e2edff;
     -webkit-transform: skewY(2deg);
     -moz-transform: skewY(2deg);
     -ms-transform: skewY(2deg);
@@ -451,8 +462,7 @@ section .main-content {
 }
 
 #trading {
-    background: #fafafa;
-    position: relative
+    background: #fafafa
 }
 
 .btn-trade {
@@ -480,11 +490,6 @@ section .main-content {
     transform: skewY(-2deg)
 }
 
-.img-wrap,
-.partner {
-    position: relative
-}
-
 section .promotion {
     margin-top: 0
 }
@@ -510,19 +515,16 @@ section .promotion {
 }
 
 .partner:before {
-    content: '';
     position: absolute;
     left: 0;
     top: -36px;
-    width: 100%;
     height: 60px;
     background: #e2edff;
     -webkit-transform: skewY(2deg);
     -moz-transform: skewY(2deg);
     -ms-transform: skewY(2deg);
     -o-transform: skewY(2deg);
-    transform: skewY(2deg);
-    -webkit-backface-visibility: hidden
+    transform: skewY(2deg)
 }
 
 .footer {
@@ -1001,13 +1003,13 @@ a img.aligncenter {
 }
 
 .breadcrumb-wrapper {
-    background-color: #d3d3d3;
+    background-color: #d3d3d3
 }
 
 #primary {
-    margin-top: 3em;
+    margin-top: 3em
 }
 
 .breadcrumb-text {
-    margin-left: 1em;
+    margin-left: 1em
 }

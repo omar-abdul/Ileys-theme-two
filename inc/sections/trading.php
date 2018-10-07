@@ -13,8 +13,8 @@ $posts = get_posts($args);
 $category_slugs = array(
 
 'building-materials',
-'electric-equipment',
-'water',
+'electric-supplies',
+'water-section',
 'paint',
 'aluminium'
 
@@ -49,7 +49,7 @@ $category_slugs = array(
                 ?>  
                 
                 <a href="<?php echo esc_url($cat_link);?>" title="<?php echo esc_html__($cat->name);?>">
-                    <div class="bg-image" style="background-image:url(<?php echo $image['url']?>)">
+                    <div class="bg-image-contain" style="background-image:url(<?php echo $image['url']?>)">
                     
                      </div>
                       <span class="img-caption"><p><?php echo $cat->name;?></p></span>

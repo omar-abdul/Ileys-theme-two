@@ -57,7 +57,7 @@ Header to display on all pages except front page
                                 }
                     
                             ?>
-                            l
+                            
                         </div>
                  </div>
 
