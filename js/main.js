@@ -131,18 +131,7 @@
             }
         }
     });
-    function addWhite(){
-        if($('#front-header').hasClass('bg-nav')){
-            $('#front-header').removeClass('bg-nav');
-        }
-        $('#front-header').addClass('bg-white');
-    }
-    function addTransparent(){
-        if($('#front-header').hasClass('bg-white')){
-            $('#front-header').removeClass('bg-white');
-        }
-        $('#front-header').addClass('bg-nav');
-    }
+
     var arr = $('.yt-thumbnail').toArray();
     if(arr){
         for(var i = 0; i < arr.length; i++){

@@ -18,16 +18,13 @@ Template Name:Archives Brand
 
 ?>
 
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-            <?php
-                if ( function_exists('yoast_breadcrumb') ) {
-                yoast_breadcrumb( '
-                <p id="breadcrumbs">','</p>
-                ' );
-                }
-            ?>
+
 			<div class="container-fluid ileys-post-container">
+
+
 			<div class="search-container">
 			<?php get_search_form(); ?>
 

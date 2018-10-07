@@ -26,16 +26,17 @@ if($cat !==0):
 
            
                 <div class="item">
-                    <a href="<?php echo get_the_post_thumbnail_url($post->ID,'full')?>" data-toggle="lightbox"  data-max-width='600' data-gallery="partner-gallery"> <?php 
-                    $arr = array(
-                        'id'=>'img_'.$post->ID,
-                        'class'=>' img-fluid img-thumbnail '
-                    ) ;
+                    <?php 
+                        $arr = array(
+                            'id'=>'img_'.$post->ID,
+                            'class'=>' img-fluid img-thumbnail '
+                        ) ;
                     
-                    ?><div class="bg-image" style="background-image:url('<?php echo get_the_post_thumbnail_url($post->ID ,'large'); ?>') ; "> 
+                    ?>
+                    <div class="bg-image" style="background-image:url('<?php echo get_the_post_thumbnail_url($post->ID ,'large'); ?>') ; "> 
                     </div>
                     
-                    </a>                
+                                 
                 </div>
 
                 

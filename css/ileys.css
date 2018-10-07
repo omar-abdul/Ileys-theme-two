@@ -211,7 +211,6 @@ a:hover {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: 3em
 }
 
 .navbar-ileys {
@@ -398,30 +397,30 @@ section .main-content {
     margin-bottom: 5em
 }
 
-/* #trading,
-.products {
-    padding: 3em;
-    
-} */
-
 .bounce-content {
-    opacity: 0;
-    
+    opacity: 0
 }
 
 .bounce {
     animation: bounce 1s;
     opacity: 1;
-    transform: scale(0.85);
-  }
-  
-  @keyframes bounce {
-    0% { transform: scale(0); opacity: 1;}
-    50% { transform: scale(1.1); opacity: 1;}
-    100% { transform: scale(0.85); opacity: 1;}
-  }
-  
+    transform: scale(.85)
+}
 
+@keyframes bounce {
+    0% {
+        transform: scale(0);
+        opacity: 1
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1
+    }
+    100% {
+        transform: scale(.85);
+        opacity: 1
+    }
+}
 
 #trading .section-image {
     right: -600px
@@ -429,11 +428,6 @@ section .main-content {
 
 .products {
     background: #e2edff
-}
-
-.main-content {
-    
-    
 }
 
 #trading:before,
@@ -626,8 +620,7 @@ article .card {
 
 .card-header {
     height: 200px;
-    width:300px;
-    
+    width: 300px;
     display: block;
     position: relative;
     background-position: center center;
@@ -1007,4 +1000,14 @@ a img.aligncenter {
     }
 }
 
+.breadcrumb-wrapper {
+    background-color: #d3d3d3;
+}
 
+#primary {
+    margin-top: 3em;
+}
+
+.breadcrumb-text {
+    margin-left: 1em;
+}

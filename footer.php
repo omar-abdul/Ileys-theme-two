@@ -6,8 +6,12 @@
                         <div class="footer-menu p-4 ">
                                 <div class="row  justify-content-center align-items-center " >
                                         <div class="col-12 col-md-4">
-                                        <img src="<?php echo get_theme_mod('ileys_logo')?>" class="img-responsive " style="width:200px">
-
+                                        <!-- <img src="<?php echo get_theme_mod('ileys_logo')?>" class="img-responsive " style="width:200px"> -->
+                                        <?php if ( is_active_sidebar( 'footer-widget-main' ) ) : ?>
+                                        <div id="footer-main" class="footer-widget widget-area" role="complementary">
+                                        <?php dynamic_sidebar( 'footer-widget-main' ); ?>
+                                        </div>
+                                        <?php endif; ?>
                                         </div>
                 
                                         <div class="col-12 col-md-2">
