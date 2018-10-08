@@ -221,7 +221,7 @@ a:hover {
 }
 
 .bg-ultra-light {
-    background-color: rgba(255, 255, 255, .6);
+    background-color: rgba(255, 255, 255, .9);
     box-shadow: 0 -2px 2px rgba(0, 0, 0, .4)
 }
 
@@ -1012,4 +1012,8 @@ a img.aligncenter {
 
 .breadcrumb-text {
     margin-left: 1em
+}
+
+.wd-200 a {
+    min-width: 200px;
 }
