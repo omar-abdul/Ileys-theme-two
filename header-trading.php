@@ -46,6 +46,20 @@ Header to display on all pages except front page
                         </nav>
                 
                 </header>
+                <div class="breadcrumb-wrapper"> 
+                    <div class="mx-5">	
+                    
+                        <?php
+                            if ( function_exists('yoast_breadcrumb') ) {
+                                 yoast_breadcrumb( '
+                                 <p id="breadcrumbs">','</p>
+                                 ' );
+                             }
+                
+                         ?>
+                
+                    </div>
+                </div><!--breadcrumb-wrapper-->
             </div><!--.col-12-->
 
         </div>
