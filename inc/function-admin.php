@@ -89,6 +89,19 @@ add_settings_section(
             'upload-btn-3'
         )        
     ); 
+    
+    add_settings_field(
+        'slider_image_4', #unique Id
+        'Slider 4 Options',        #Title to show
+        'ileys_slider_image_fourth', #callback function
+        'ileys_theme',          #page
+        'ileys-slider-options', #section id
+        array(
+            'slider_image_4' , #arguments
+            'upload-btn-4'
+        )        
+    ); 
+
 
     add_settings_field(
         'option_fb', #unique Id
@@ -129,14 +142,18 @@ add_settings_section(
     register_setting('ileys-settings-group','slider_image_1');
     register_setting('ileys-settings-group','slider_image_2');
     register_setting('ileys-settings-group','slider_image_3');
+    register_setting('ileys-settings-group','slider_image_4');
     
     register_setting('ileys-settings-group','slider_text_1');
     register_setting('ileys-settings-group','slider_text_2');
     register_setting('ileys-settings-group','slider_text_3');
+    register_setting('ileys-settings-group','slider_text_4');
 
     register_setting('ileys-settings-group','slider_sub_text_1');
     register_setting('ileys-settings-group','slider_sub_text_2');
     register_setting('ileys-settings-group','slider_sub_text_3');
+    register_setting('ileys-settings-group','slider_sub_text_4');
+    
 
 
     // Social links settings
@@ -204,6 +221,14 @@ function ileys_slider_image_third($args){
     $subtext = esc_attr(get_option('slider_sub_text_3'));
 
     echo '<input type="button" class="button button-secondary" value = "Upload image" id="'.$args[1].'"><input type= "hidden" id= "'. $args[0] .'" name = "'. $args[0] .'"   value = "'. $file .'"><br/><textarea rows="4" cols="60" class="form-group" id ="slider_text_3" name = "slider_text_3" placeholder="slider text">'.$text.'</textarea><br/><textarea rows="4" cols="60" class="form-group" id ="slider_sub_text_3" name = "slider_sub_text_3" placeholder="slider text">'.$subtext.'</textarea>';
+}
+
+function ileys_slider_image_fourth($args){
+    $file = esc_attr(get_option($args[0]));
+    $text = esc_attr(get_option('slider_text_4'));
+    $subtext = esc_attr(get_option('slider_sub_text_4'));
+
+    echo '<input type="button" class="button button-secondary" value = "Upload image" id="'.$args[1].'"><input type= "hidden" id= "'. $args[0] .'" name = "'. $args[0] .'"   value = "'. $file .'"><br/><textarea rows="4" cols="60" class="form-group" id ="slider_text_4" name = "slider_text_4" placeholder="slider text">'.$text.'</textarea><br/><textarea rows="4" cols="60" class="form-group" id ="slider_sub_text_4" name = "slider_sub_text_4" placeholder="slider text">'.$subtext.'</textarea>';
 }
 
 function ileys_create_page() {

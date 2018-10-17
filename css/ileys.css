@@ -328,7 +328,7 @@ header .site-nav:after {
     border-right: 5px solid transparent
 }
 
-.about-container,
+.about,
 .main-content,
 .products {
     position: relative
@@ -385,12 +385,12 @@ header .site-nav:after {
 
 .products,
 .products:before {
-    background: #e2edff
+    background: #ff542d;
 }
 
 .active .carousel-caption {
     opacity: 1;
-    top: 50%
+    top: 30%
 }
 
 section .title {
@@ -407,8 +407,18 @@ section .main-content {
 .about {
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 5em
+    position: relative;
 }
+.about:after{
+    position: absolute;
+    height: 60px;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    content: ''
+}
+
+
 
 .bounce-content {
     opacity: 0
@@ -416,7 +426,7 @@ section .main-content {
 
 .bounce {
     animation: bounce 1s;
-    opacity: 0;
+    opacity: 1;
     transform: scale(.85)
 }
 
@@ -439,7 +449,7 @@ section .main-content {
     right: -600px
 }
 
-#trading:before,
+
 .products:before {
     position: absolute;
     height: 60px;
@@ -488,6 +498,37 @@ section .main-content {
     -ms-transform: skewY(-2deg);
     -o-transform: skewY(-2deg);
     transform: skewY(-2deg)
+}
+
+
+
+.quotes {
+    border:none;
+   
+    quotes: "\201C""\201D""\2018""\2019";
+
+}
+.quotes h3 {
+    font-size: 21px;
+    
+}
+.banner-quote h5{
+    font-size: 12px;
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, Verdana sans-serif !important;
+}
+.quotes h3:before { 
+    content: open-quote;
+    font-weight: bold;
+    font-size:100px;
+    color:#5c95ff;
+} 
+.quotes h3:after { 
+    content: close-quote;
+    font-weight: bold;
+    font-size:100px;
+    margin-top:20px;
+    color:#5c95ff;
+  
 }
 
 section .promotion {
@@ -1015,5 +1056,21 @@ a img.aligncenter {
 }
 
 .wd-200 a {
-    min-width: 200px;
+    min-width: 200px
+}
+
+.bg-dark-blue{
+    background-color:rgb(1, 42, 102);
+    color:#fff;
+}
+.bg-light-yellow{
+    
+    color:#fff;
+}
+.bg-glass-white{
+    background-color:rgba(255,255,255,.8);
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ ;
+
+    -moz-box-shadow: inset 0 -3px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 -3px 1px rgba(0,0,0,0.5);
 }

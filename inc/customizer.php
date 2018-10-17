@@ -229,7 +229,7 @@ function ileys_customize_register($wp_customize){
         )
      )
   ) );
-
+    
 
   $wp_customize->add_setting( 'ileys_exclude_posts',
   array(
@@ -252,6 +252,72 @@ function ileys_customize_register($wp_customize){
          'placeholder'=>"eg. brands,trading,etc"
      )
 ) );
+
+//Banner Quote Section
+$wp_customize->add_section('ileys_quotes_section',
+        
+    array(
+        'title'=>__('Banner Quote Section '),
+        'description'=> __('Edit Banner Quote Section'),
+        'panel'=>'ileys_section_panel'
+    )
+);
+
+$wp_customize->add_setting( 'ileys_ceo_message',
+    array(
+        'default' => '',
+        'transport' => 'refresh',
+        "type"=>'theme_mod',
+        'sanitize_callback'=>'esc_attr'
+    )
+);
+
+
+$wp_customize->add_control( 'ileys_ceo_message',
+array(
+   'label' => __( 'What text should appear on the promotion section' ),
+   'description' => esc_html__( 'Choose text to show over image' ),
+   'section' => 'ileys_quotes_section',
+   "setting" =>'ileys_ceo_message',
+   'priority' => 10, // Optional. Order priority to load the control. Default: 10
+   'type' => 'text', // Can be either text, email, url, number, hidden, or date
+   'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+   'input_attrs' => array( // Optional.
+      'class' => 'my-custom-class',
+      'style' => 'border: 1px solid rebeccapurple',
+      'placeholder' => __( 'Enter text...' ),
+   ),
+)
+);
+
+
+
+$wp_customize->add_setting( 'ileys_ceo_message_author',
+    array(
+        'default' => '',
+        'transport' => 'refresh',
+        "type"=>'theme_mod',
+        'sanitize_callback'=>'esc_attr'
+    )
+);
+
+$wp_customize->add_control( 'ileys_ceo_message_author',
+array(
+   'label' => __( 'What text should appear on the promotion section' ),
+   'description' => esc_html__( 'Choose text to show over image' ),
+   'section' => 'ileys_quotes_section',
+   "setting" =>'ileys_ceo_message_author',
+   'priority' => 10, // Optional. Order priority to load the control. Default: 10
+   'type' => 'text', // Can be either text, email, url, number, hidden, or date
+   'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+   'input_attrs' => array( // Optional.
+      'class' => 'my-custom-class',
+      'style' => 'border: 1px solid rebeccapurple',
+      'placeholder' => __( 'Enter name...' ),
+   ),
+)
+);
+
 
      $wp_customize->add_setting( 'promotion_section_text',
      array(
