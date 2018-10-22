@@ -7,7 +7,7 @@ Front page section of the website
 */
 ?>
 <?php  get_header();
-$ileys_theme_sections = array(  'slider','about', 'product', 'trading', 'quotebanner','partners','promotional',  );  
+$ileys_theme_sections = array(  'slider','about', 'product', 'trading', 'counter','quotebanner','partners','promotional',  );  
 
 if ( 'posts' == get_option( 'show_on_front' ) ) {
     include( get_home_template() );

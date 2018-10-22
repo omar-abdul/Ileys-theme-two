@@ -1,6 +1,6 @@
 <div class="container py-3">
     <div class="card flex-row flex-wrap">
-        <div class="card-header border-0 bg-card-image" style="background-image:url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium'); ?>')">
+        <div class="card-header border-0 bg-image-contain" style="background-image:url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium'); ?>')">
             
         </div>
         <div class="card-block p-2">

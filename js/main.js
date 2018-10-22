@@ -94,6 +94,9 @@
         loop:true,
         margin:10,
         responsiveClass:true,
+        autoplay:true,
+        autoplayTimeout:1000,
+        autoplayHoverPause:false,
         responsive:{
             0:{
                 items:1,
@@ -113,8 +116,12 @@
     
         $('.partner-carousel').owlCarousel({
         loop:true,
+        rtl:true,
         margin:10,
         responsiveClass:true,
+        autoplay:true,
+        autoplayTimeout:1000,
+        autoplayHoverPause:false,
         responsive:{
             0:{
                 items:1,
@@ -125,12 +132,36 @@
                 nav:true
             },
             1000:{
-                items:5,
-                nav:true,
-                loop:false
+                items:4,
+
+                
             }
         }
     });
+
+
+
+
+    $('.counter').each(function(){
+            var limit = $(this).data('limit');
+            var $this = $(this);
+            jQuery({ Counter: 0 }).animate({ Counter: limit }, {
+              duration: 2500,
+              easing: 'swing',
+              step: function () {
+                $this.children('.count').text(formatNumber(Math.ceil(this.Counter)));
+              }
+            });
+
+          
+    });
+
+    function formatNumber(number){
+                    
+        var string = number.toString();
+        string = string.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return string;
+    }
 
     var arr = $('.yt-thumbnail').toArray();
     if(arr){

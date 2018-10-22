@@ -58,6 +58,7 @@ function customTheme_script_enqueue(){
     wp_enqueue_style('owlcarouseltheme', get_template_directory_uri()."/css/owl.theme.default.min.css", array(), "2.3.4", "all" );
 
     wp_enqueue_style('fonts', "https://fonts.googleapis.com/css?family=Comfortaa:400,700|Lato", array(),'1.0.3', "all" );
+    wp_enqueue_style('fontawesome', "https://use.fontawesome.com/releases/v5.4.1/css/all.css", array(), "5.4.1", "all" );
     wp_enqueue_style('customstyle', get_template_directory_uri()."/css/ileys.css", array(), "1.0.1", "all" );
 
 

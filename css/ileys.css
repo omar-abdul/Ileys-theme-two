@@ -552,7 +552,7 @@ section .promotion {
 
 .partner {
     padding: 40px;
-    background: #e2edff
+    background: #fafafa;
 }
 
 .partner:before {
@@ -560,7 +560,7 @@ section .promotion {
     left: 0;
     top: -36px;
     height: 60px;
-    background: #e2edff;
+    background: #012a66;
     -webkit-transform: skewY(2deg);
     -moz-transform: skewY(2deg);
     -ms-transform: skewY(2deg);
@@ -1073,4 +1073,15 @@ a img.aligncenter {
 
     -moz-box-shadow: inset 0 -3px 1px rgba(0,0,0,0.5);
     -webkit-box-shadow: inset 0 -3px 1px rgba(0,0,0,0.5);
+}
+
+.bg-dark-red {
+    background-color: #ff1e2d;
+    color:#ffffff;
+}
+.counter {
+    font-size:40px;
+}
+.counter .field {
+    font-size:20px;
 }

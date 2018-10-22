@@ -156,6 +156,256 @@ function ileys_customize_register($wp_customize){
          )
             );
 
+// Counter section
+
+        $wp_customize->add_section('counter_section',
+                
+        array(
+            'title'=>__('Counter Section '),
+            'description'=> __('Edit Counter Section'),
+            'panel'=>'ileys_section_panel'
+            )
+        );
+        //counter checkbox
+
+        $wp_customize->add_setting('ileys_show_counter',
+            array(
+                'default'=>'',
+                'transport'=>'refresh',
+                'capability'=>'edit_theme_options',
+                'sanitize_callback'=>'ileys_theme_sanitize_checkbox'
+            )       
+        );
+
+        $wp_customize->add_control( 'ileys_show_counter', 
+        array(
+            'type' => 'checkbox',
+            'section' => 'counter_section', // Add a default or your own section
+            'label' => __( 'Show counter section','ileystheme'),
+            'description' => __( '' ),
+          )
+         );
+
+
+
+         //counter icons
+
+         $wp_customize->add_setting('ileys_first_icon',
+         array(
+            'default'=>'',
+            'transport'=>'refresh',
+            'capability'=>'edit_theme_options',
+            'sanitize_callback'=>'esc_attr'   
+         )
+        );
+
+        $wp_customize->add_control( 'ileys_first_icon',
+        array(
+           'label' => __( 'First Icon' ),
+           'description' => esc_html__( 'You can find a full list of the icon at https://fontawesome.com/icons' ),
+           'section' => 'counter_section',
+           'priority' => 10, // Optional. Order priority to load the control. Default: 10
+           'type' => 'text', // Can be either text, email, url, number, hidden, or date
+           'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+           'input_attrs' => array( // Optional.
+
+              'placeholder' => __( 'example fas fa-ghost' ),
+           ),
+        )
+     );        
+
+
+
+
+     $wp_customize->add_setting('ileys_second_icon',
+     array(
+        'default'=>'',
+        'transport'=>'refresh',
+        'capability'=>'edit_theme_options',
+        'sanitize_callback'=>'esc_attr'   
+     )
+    );
+
+    $wp_customize->add_control( 'ileys_second_icon',
+    array(
+       'label' => __( 'second Icon' ),
+       'description' => esc_html__( 'You can find a full list of the icon at https://fontawesome.com/icons' ),
+       'section' => 'counter_section',
+       'priority' => 10, // Optional. Order priority to load the control. Default: 10
+       'type' => 'text', // Can be either text, email, url, number, hidden, or date
+       'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+       'input_attrs' => array( // Optional.
+
+          'placeholder' => __( 'example fas fa-ghost' ),
+       ),
+    )
+ );      
+
+         $wp_customize->add_setting('ileys_third_icon',
+         array(
+            'default'=>'',
+            'transport'=>'refresh',
+            'capability'=>'edit_theme_options',
+            'sanitize_callback'=>'esc_attr'   
+         )
+        );
+
+        $wp_customize->add_control( 'ileys_third_icon',
+        array(
+           'label' => __( 'Third Icon' ),
+           'description' => esc_html__( 'You can find a full list of the icon at https://fontawesome.com/icons' ),
+           'section' => 'counter_section',
+           'priority' => 10, // Optional. Order priority to load the control. Default: 10
+           'type' => 'text', // Can be either text, email, url, number, hidden, or date
+           'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+           'input_attrs' => array( // Optional.
+
+              'placeholder' => __( 'example fas fa-ghost' ),
+           ),
+        )
+     );  
+
+
+
+     // Counter limit
+
+
+     $wp_customize->add_setting('ileys_first_limit',
+     array(
+        'default'=>'',
+        'transport'=>'refresh',
+        'capability'=>'edit_theme_options',
+        'sanitize_callback'=>'absint'   
+     )
+    );
+    $wp_customize->add_control( 'ileys_first_limit',
+    array(
+       'label' => __( 'First counter limit' ),
+       'description' => esc_html__( '' ),
+       'section' => 'counter_section',
+       'priority' => 10, // Optional. Order priority to load the control. Default: 10
+       'type' => 'number', // Can be either text, email, url, number, hidden, or date
+       'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+       'input_attrs' => array( // Optional.
+        'placeholder' => __( 'example 300' ),
+       ),
+    )
+ );     
+     $wp_customize->add_setting('ileys_second_limit',
+     array(
+        'default'=>'',
+        'transport'=>'refresh',
+        'capability'=>'edit_theme_options',
+        'sanitize_callback'=>'absint'   
+     )
+    );
+    $wp_customize->add_control( 'ileys_second_limit',
+    array(
+       'label' => __( 'Second counter limit' ),
+       'description' => esc_html__( '' ),
+       'section' => 'counter_section',
+       'priority' => 10, // Optional. Order priority to load the control. Default: 10
+       'type' => 'number', // Can be either text, email, url, number, hidden, or date
+       'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+       'input_attrs' => array( // Optional.
+
+          'placeholder' => __( 'example 300' ),
+       ),
+    )
+ );   
+
+      $wp_customize->add_setting('ileys_third_limit',
+     array(
+        'default'=>'',
+        'transport'=>'refresh',
+        'capability'=>'edit_theme_options',
+        'sanitize_callback'=>'absint'   
+     )
+    );
+    $wp_customize->add_control( 'ileys_third_limit',
+    array(
+       'label' => __( 'Third counter limit' ),
+       'description' => esc_html__( '' ),
+       'section' => 'counter_section',
+       'priority' => 10, // Optional. Order priority to load the control. Default: 10
+       'type' => 'number', // Can be either text, email, url, number, hidden, or date
+       'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+       'input_attrs' => array( // Optional.
+        'placeholder' => __( 'example 300' ),
+       ),
+    )
+ );   
+
+
+       $wp_customize->add_setting('ileys_counter_field_one',
+     array(
+        'default'=>'',
+        'transport'=>'refresh',
+        'capability'=>'edit_theme_options',
+        'sanitize_callback'=>'esc_html'   
+     )
+    );
+    $wp_customize->add_control( 'ileys_counter_field_one',
+    array(
+       'label' => __( 'Field corresponding to first counter' ),
+       'description' => esc_html__( 'The first counter field' ),
+       'section' => 'counter_section',
+       'priority' => 10, // Optional. Order priority to load the control. Default: 10
+       'type' => 'text', // Can be either text, email, url, number, hidden, or date
+       'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+       'input_attrs' => array( // Optional.
+        'placeholder' => __( 'example :Happy clients' ),
+       ),
+    )
+ ); 
+
+        $wp_customize->add_setting('ileys_counter_field_two',
+     array(
+        'default'=>'',
+        'transport'=>'refresh',
+        'capability'=>'edit_theme_options',
+        'sanitize_callback'=>'esc_html'   
+     )
+    );
+    $wp_customize->add_control( 'ileys_counter_field_two',
+    array(
+       'label' => __( 'Field corresponding to second counter' ),
+       'description' => esc_html__( 'The first counter field' ),
+       'section' => 'counter_section',
+       'priority' => 10, // Optional. Order priority to load the control. Default: 10
+       'type' => 'text', // Can be either text, email, url, number, hidden, or date
+       'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+       'input_attrs' => array( // Optional.
+        'placeholder' => __( 'example :Happy clients' ),
+       ),
+    )
+ ); 
+
+        $wp_customize->add_setting('ileys_counter_field_three',
+     array(
+        'default'=>'',
+        'transport'=>'refresh',
+        'capability'=>'edit_theme_options',
+        'sanitize_callback'=>'esc_html'   
+     )
+    );
+    $wp_customize->add_control( 'ileys_counter_field_three',
+    array(
+       'label' => __( 'Field corresponding to third counter' ),
+       'description' => esc_html__( 'The first counter field' ),
+       'section' => 'counter_section',
+       'priority' => 10, // Optional. Order priority to load the control. Default: 10
+       'type' => 'text', // Can be either text, email, url, number, hidden, or date
+       'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+       'input_attrs' => array( // Optional.
+        'placeholder' => __( 'example :Happy clients' ),
+       ),
+    )
+ ); 
+
+
+
+
         $wp_customize->add_section('ileys_promotion_section',
         
         array(
@@ -275,8 +525,8 @@ $wp_customize->add_setting( 'ileys_ceo_message',
 
 $wp_customize->add_control( 'ileys_ceo_message',
 array(
-   'label' => __( 'What text should appear on the promotion section' ),
-   'description' => esc_html__( 'Choose text to show over image' ),
+   'label' => __( 'Quote text','ileystheme' ),
+   'description' => esc_html__( 'Text that should appear in the banner under quotes' ),
    'section' => 'ileys_quotes_section',
    "setting" =>'ileys_ceo_message',
    'priority' => 10, // Optional. Order priority to load the control. Default: 10
@@ -303,8 +553,8 @@ $wp_customize->add_setting( 'ileys_ceo_message_author',
 
 $wp_customize->add_control( 'ileys_ceo_message_author',
 array(
-   'label' => __( 'What text should appear on the promotion section' ),
-   'description' => esc_html__( 'Choose text to show over image' ),
+   'label' => __( 'Quote text','ileystheme' ),
+   'description' => esc_html__( 'Text that should appear in the banner under quotes','ileystheme' ),
    'section' => 'ileys_quotes_section',
    "setting" =>'ileys_ceo_message_author',
    'priority' => 10, // Optional. Order priority to load the control. Default: 10
@@ -441,4 +691,8 @@ function my_sanitize_image( $input ){
     }
  
     return $output;
+}
+
+function ileys_theme_sanitize_checkbox ($checked){
+    return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
