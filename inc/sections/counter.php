@@ -21,6 +21,7 @@
 
 if(true == $checked):
 ?>
+<section class="counter-section">
     <div class="container-fluid  bg-dark-red p-5">
         <div class="row align-items-center text-center">
         
@@ -56,7 +57,7 @@ if(true == $checked):
             </div><!--col-->                        
         </div><!--row-->
     </div>
-
+</section>
 <?php    
 endif;
  

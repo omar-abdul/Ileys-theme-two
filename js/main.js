@@ -29,6 +29,7 @@
         return null;
        
     }
+    var flag = true;
 
     $(window).scroll(function(){
 
@@ -41,6 +42,9 @@
     var productSection = getSectionHeight('.products');
     var tradingSection = getSectionHeight('.tradings');
     var partnerSection = getSectionHeight('.partner');
+
+    var counterSection = getSectionHeight('.counter-section');
+
 
         if(aboutSection && windowBottom >= aboutSection){
             
@@ -57,6 +61,10 @@
         if(partnerSection && windowBottom >= partnerSection){
             
             $('.partner .bounce-content').addClass('bounce');
+        }
+        if(counterSection && windowBottom >= counterSection && flag){
+            
+             startCounter();
         }
 
     });
@@ -139,22 +147,29 @@
         }
     });
 
+        function startCounter(){
+
+            
+                $('.counter').each(function(){
+                    var limit = $(this).data('limit');
+                    var $this = $(this);
+                    jQuery({ Counter: 0 }).animate({ Counter: limit }, {
+                      duration: 2500,
+                      easing: 'swing',
+                      step: function () {
+                        $this.children('.count').text(formatNumber(Math.ceil(this.Counter)));
+                        flag = false;
+                      },
+
+                    });
+        
+                  
+            });                
+            
+             
 
 
-
-    $('.counter').each(function(){
-            var limit = $(this).data('limit');
-            var $this = $(this);
-            jQuery({ Counter: 0 }).animate({ Counter: limit }, {
-              duration: 2500,
-              easing: 'swing',
-              step: function () {
-                $this.children('.count').text(formatNumber(Math.ceil(this.Counter)));
-              }
-            });
-
-          
-    });
+        }
 
     function formatNumber(number){
                     
