@@ -158,9 +158,13 @@
                       easing: 'swing',
                       step: function () {
                         $this.children('.count').text(formatNumber(Math.ceil(this.Counter)));
-                        flag = false;
+                        
                       },
 
+                    }).promise().done(function(){
+                        
+                        $this.children('.count').text(formatNumber(limit));
+                        flag = false;
                     });
         
                   
@@ -175,7 +179,7 @@
                     
         var string = number.toString();
         string = string.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        return string;
+        return string +'+';
     }
 
     var arr = $('.yt-thumbnail').toArray();
