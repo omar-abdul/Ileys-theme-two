@@ -472,7 +472,7 @@ section .main-content {
 }
 
 #trading {
-    background: #fafafa
+    background: #fff;
 }
 
 .btn-trade {
@@ -523,7 +523,7 @@ section .main-content {
     color:#5c95ff;
 } 
 .quotes h3:after { 
-    content: close-quote;
+
     font-weight: bold;
     font-size:100px;
     margin-top:20px;
@@ -1077,11 +1077,22 @@ a img.aligncenter {
 
 .bg-dark-red {
     background-color: #ff1e2d;
-    color:#ffffff;
+    
+}
+.counter-section{
+    background-color: #ff1e2d;
+
 }
 .counter {
     font-size:40px;
 }
 .counter .field {
-    font-size:20px;
+    font-size:16px;
+}
+.circle {
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+    background-color: rgb(1, 42, 102);
+    color:#ffffff;
 }

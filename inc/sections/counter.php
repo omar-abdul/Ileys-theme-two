@@ -22,20 +22,25 @@
 if(true == $checked):
 ?>
 <section class="counter-section">
-    <div class="container-fluid  bg-dark-red p-5">
-        <div class="row align-items-center text-center">
+    <div class="container   p-5 text-center">
+        <div class="row align-items-center  justify-content-center">
         
-            <div class="col-12 col-md-4">
-                <span style="font-size:3em">
-                <i class="<?php echo esc_html__($icon1)?>"></i>
-                </span>
-                <div class="counter" data-limit="<?php echo esc_html__($first_limit)?>">
-                <p class="count"></p>
-                <p class="field"><?php echo esc_html__(get_theme_mod('ileys_counter_field_one')) ?></p>                 
-                </div><!--counter-->
+            <div class="col-12 col-md-4 p-3">
+                <div class="circle">
+                    <span style="font-size:3em">
+                    <i class="<?php echo esc_html__($icon1)?>"></i>
+                    </span>
+                    <div class="counter" data-limit="<?php echo esc_html__($first_limit)?>">
+                    <p class="count"></p>
+                    <p class="field"><?php echo esc_html__(get_theme_mod('ileys_counter_field_one')) ?></p>                 
+                    </div><!--counter-->                
+                
+                </div><!--circle-->
+
             </div><!--col-->
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 p-3 ">
+            <div class="circle">
                 <span style="font-size:3em">
                 <i class="<?php echo esc_html__($icon2)?>"></i>
                 </span>
@@ -43,9 +48,11 @@ if(true == $checked):
                 <p class="count"></p>
                 <p class="field"><?php echo esc_html__(get_theme_mod('ileys_counter_field_two')) ?></p>                
                 </div><!--counter-->
+            </div><!--circle-->
             </div><!--col-->
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 p-3 ">
+             <div class="circle">
                 <span style="font-size:3em">
                 <i class="<?php echo esc_html__($icon3)?>"></i>
                 </span>
@@ -53,7 +60,7 @@ if(true == $checked):
                     <p class="count"></p>
                     <p class="field"><?php echo esc_html__(get_theme_mod('ileys_counter_field_three')) ?></p>
                 </div><!--counter-->
-               
+                </div><!--circle-->
             </div><!--col-->                        
         </div><!--row-->
     </div>
